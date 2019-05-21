@@ -1,0 +1,30 @@
+<div class="container">
+    <form [formGroup]="loginUserForm" novalidate>
+        <div class="container">
+            <div class="row"></div>
+            <div class="row">
+                <div class="offset-md-2 col-md-8">
+                    <input class="form-control" md-input type="text" formControlName="userName" placeholder="Username/Email" required/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="offset-md-2 col-md-8">
+                    <input class="form-control" md-input type="password" formControlName="password" placeholder="Password" required />
+                </div>
+            </div>
+            <div class="row"></div>
+            <div class="row">
+                <div class="offset-md-2 col-md-8">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <button type="button" class="btn btn-primary">SignUp</button>
+                        </div>
+                        <div class="col-md-6">
+                            <button type="submit" class="btn btn-success" [disabled]="!loginUserForm.valid">Login</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
