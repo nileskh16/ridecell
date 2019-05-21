@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    margin: 0px;
+    height: 100%;
+}
+
+.form-control {
+    border: 2px solid #c7c9cc;
+}
+
+@mixin welcome-h() {
+    text-align: center;
+    color: white;
+    padding: 30px;
+}
+
+@mixin formStyle($formBgColor) {
+    background-color: $formBgColor;
+    padding: 30px 11px 15px 11px;
+    border-radius: 7px;
+    box-shadow: 1px 2px #11221170;
+    width: 450px;
+    margin: 0 auto;
+}

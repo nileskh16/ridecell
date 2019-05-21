@@ -21,6 +21,12 @@ export class LoginComponent implements OnInit, OnDestroy {
         });
     }
 
+    changeType(controlName: any) {
+        if (controlName) {
+            controlName.type = controlName.type === 'password' ? 'text' : 'password';
+        }
+    }
+
     ngOnInit() {
 
     }

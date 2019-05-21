@@ -1,0 +1,51 @@
+<div class="main-content">
+    <form [formGroup]="userRegForm" novalidate>
+        <h1 class="welcome-h">
+            Please tell us a little about you!
+        </h1>
+        <div class="signup-form">
+            <div class="container">
+                <div class="form-group row">
+                    <div class="col-12">
+                        <input class="form-control" type="text" placeholder="Display Name" formControlName="displayName"
+                            required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-12">
+                        <input class="form-control" type="email" placeholder="Email" formControlName="emailId" required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-10">
+                        <input class="form-control" #userPwd type="password" placeholder="Password"
+                            formControlName="userPwd" required>
+                    </div>
+                    <div class="col-2" (click)="changeType(userPwd)">
+                        <img src="https://img.icons8.com/ios/50/000000/visible.png">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-10">
+                        <input class="form-control" #confirmPwd type="password" placeholder="Password Again"
+                            formControlName="confirmPwd" required>
+                    </div>
+                    <div class="col-2" (click)="changeType(confirmPwd)">
+                        <img src="https://img.icons8.com/ios/50/000000/visible.png">
+                    </div>
+                </div>
+                <br />
+                <div class="form-group row">
+                    <div class="col-6">
+                        <button type="submit" class="form-control btn btn-success" [disabled]="!userRegForm.valid">Sign
+                            Up</button>
+                    </div>
+                    <div class="col-6">
+                        <button type="button" class="form-control btn btn-primary"
+                            [routerLink]="'/login'">Login</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
