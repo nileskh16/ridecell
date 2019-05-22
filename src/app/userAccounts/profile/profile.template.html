@@ -1,8 +1,61 @@
 <div class="main-body">
     <div>
-        <button data-toggle="collapse" data-target="#profileView">DN</button>
+        <h2 class="user-home-h">
+            User Home Page
+        </h2>
+        <button class="dispBtn" data-toggle="modal" data-target="#profileView">DN</button>
     </div>
-    <div class="collapse" id="profileView">
-        Profile Info
+
+    <div class="modal right fade profileBoard" id="profileView" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <div class="table-div">
+                        <div class="table-div-row">
+                            <h5>Display Name</h5>
+                        </div>
+                        <div class="table-div-row">
+                            <h6 style="color: grey">email@example.com</h6>
+                        </div>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="table-div">
+                        <div class="table-div-row">
+                            <div class="table-div-col">
+                                <b>Account Age:</b>
+                            </div>
+                            <div class="table-div-col">
+                                <p>1 Day</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-div">
+                        <div style="display:table-caption">
+                            <h5>Security</h5>
+                        </div>
+                        <div class="table-div-row">
+                            <div class="table-div-col">
+                                <b>Last Update:</b>
+                            </div>
+                            <div class="table-div-col">
+                                <p>Today</p>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <button class="btn btn-success link-btn">Reset Password</button>
+                        <button class="btn btn-danger link-btn">Logout</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </div>
 </div>

@@ -1,9 +1,49 @@
 $bgColor: #28a745;
+$btnBorderColor: #f7a4a4;
+$boardBgcolor: #dddddd;
+
+@import '../../../styles.scss';
 
 .main-body {
     background-color: $bgColor;
-    margin: 0px;
-    padding: 11px;
-    width: 100%;
-    height: 100%;
+    height: 100vh;
+
+    .dispBtn {
+        position: absolute;
+        top: 2em;
+        left: 2em;
+        width: 4em;
+        height: 4em;
+        border-radius: 100%;
+        border: 1px solid $btnBorderColor;
+    }
+
+    .profileBoard {
+        width: 20em;
+        background-color: $boardBgcolor;
+        border-radius: 3px;
+    }
+
+    .user-home-h {
+        @include welcome-h();
+    }
+
+    .table-div {
+        display: table;
+    }
+
+    .table-div-row {
+        display: table-row
+    }
+
+    .table-div-col {
+        display: table-cell;
+    }
+
+    .link-btn {
+        display:inline-block;
+        margin: 1em auto;
+        width: 10em;
+        padding: 0.6em;
+    }
 }
